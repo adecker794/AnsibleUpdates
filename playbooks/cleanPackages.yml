@@ -1,0 +1,13 @@
+- hosts: "ubuntu"
+  become: yes
+  tasks:
+    - name: clean up packages
+      apt:
+        clean: yes
+    - name: autoremove
+      ansible.builtin.apt:
+        autoremove: yes
+    - name: autoclean
+      ansible.builtin.apt:
+        autoclean: yes
+
