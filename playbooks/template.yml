@@ -1,0 +1,15 @@
+- hosts: "X"
+  become: yes
+  tasks:
+    - name: Upgrade all packages
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
+
+- hosts: "X"
+  become: yes
+  tasks:
+    - name: Upgrade all UBUNTU Packages
+      ansible.builtin.apt:
+        name: "*"
+        state: latest
